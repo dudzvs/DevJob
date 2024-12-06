@@ -1,7 +1,9 @@
+import Header from './HeaderComponent.tsx';
+
 function App() {
 	return (
-		<div>
-			<h1 className="font-bold">Hello Word</h1>
+		<div className="flex flex-col">
+			<Header />
 		</div>
 	);
 }
