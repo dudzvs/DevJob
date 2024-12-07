@@ -4,6 +4,7 @@ export default {
 	darkMode: 'class',
 	theme: {
 		colors: {
+			transparent: 'transparent',
 			blue: {
 				thick: '#5964E0',
 				soft: '#939BF4',
@@ -25,6 +26,7 @@ export default {
 				iconCheck: "url('/images/common/icon-check.svg')",
 				iconLocation: "url('/images/common/icon-location.svg')",
 				iconSearch: "url('/images/common/icon-search.svg')",
+				iconSearchWhite: "url('/images/common/icon-searchWhite.svg')",
 				iconMoon: "url('/images/common/icon-moon.svg')",
 				iconSun: "url('/images/common/icon-sun.svg')",
 				logo: "url('/images/common/logo.svg')",
