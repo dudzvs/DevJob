@@ -32,6 +32,7 @@ export default {
 				'icon-location': "url('/images/icons/icon-location.svg')",
 				'icon-search': "url('/images/icons/icon-search.svg')",
 				'icon-search-white': "url('/images/icons/icon-search-white.svg')",
+				'icon-filter': "url('/images/mobile/icon-filter.svg')",
 				'icon-moon': "url('/images/icons/icon-moon.svg')",
 				'icon-sun': "url('/images/icons/icon-sun.svg')",
 				'icon-logo': "url('/images/icons/logo.svg')",
