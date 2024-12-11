@@ -5,6 +5,7 @@ export type CardTypes = {
 	contract: string;
 	position: string;
 	location: string;
+	bgColor: string;
 };
 
 export type InputTypes = {
@@ -19,4 +20,15 @@ export type ButtonType = {
 	bgColor: string;
 	type: 'submit' | 'button';
 	size: string;
+};
+
+export type JobTypes = {
+	id: number;
+	logo: string;
+	position: string;
+	company: string;
+	contract: string;
+	location: string;
+	postedAt: string;
+	logoBackground: string;
 };

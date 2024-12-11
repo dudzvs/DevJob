@@ -5,7 +5,7 @@ function SearchBar() {
 	const handleInputChange = () => {}; // Probably you will create this funct in the content component, i dnt know we gonna research tomorrow
 
 	return (
-		<div className="absolute top-24 flex h-20 w-[90%] justify-between rounded bg-gray-light p-4 shadow-2xl">
+		<div className="absolute top-20 mb-4 flex h-20 w-[90%] justify-between rounded bg-gray-light p-4 shadow-2xl">
 			<form className="flex w-full justify-between">
 				<Input inputType={'text'} example={'Filter by Title'} inputValue={''} onChange={handleInputChange} />
 
