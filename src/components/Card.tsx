@@ -1,11 +1,8 @@
 import { CardTypes } from '../Types.ts';
 
 const Card = ({ icon, company, postedAt, contract, position, location, bgColor }: CardTypes) => {
-	// think about how to retrieve infos from JSON, those infos gonna fulfill the card info
-	// the infos will be catch from data.json
-
 	return (
-		<div className="relative flex w-full flex-col items-center justify-start rounded-2xl border-2 p-10 align-text-top">
+		<div className="relative flex w-full flex-col items-center justify-start rounded-2xl border-2 p-10 align-text-top lg:max-w-[600px]">
 			<div
 				className={`absolute left-10 top-[-22px] flex h-[50px] w-[50px] items-center justify-center rounded`}
 				style={{ backgroundColor: bgColor }}

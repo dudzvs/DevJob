@@ -21,7 +21,7 @@ const Content = () => {
 	}, []);
 
 	return (
-		<main className="mt-32 flex flex-col items-center justify-center gap-7 p-5">
+		<main className="mt-32 grid items-center justify-center gap-10 place-self-center p-5 sm:grid-cols-2 md:gap-20 lg:grid-cols-3 lg:gap-24">
 			<SearchBar />
 			{jobData.length > 0 ? (
 				jobData.map((job) => (

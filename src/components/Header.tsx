@@ -1,7 +1,7 @@
 const Header = () => {
 	return (
-		<header className="relative flex h-[136px] w-screen justify-between bg-mobile-pattern-header bg-cover bg-center bg-no-repeat p-9 sm:bg-tablet-pattern-header lg:bg-desktop-pattern-header">
-			<div className="h-10 w-[115px] bg-icon-logo bg-no-repeat"></div>
+		<header className="relative flex h-full w-screen justify-between bg-mobile-pattern-header bg-cover bg-center bg-no-repeat p-9 sm:bg-tablet-pattern-header lg:bg-desktop-pattern-header">
+			<div className="h-20 w-[115px] bg-icon-logo bg-no-repeat"></div>
 			<Switch />
 		</header>
 	);
