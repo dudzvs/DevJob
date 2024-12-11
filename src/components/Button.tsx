@@ -1,14 +1,6 @@
-const Button = ({
-	image,
-	bgColor,
-	type,
-	size,
-}: {
-	image: string;
-	bgColor: string;
-	type: 'submit' | 'button';
-	size: string;
-}) => {
+import { ButtonType } from '../Types.ts';
+
+const Button = ({ image, bgColor, type, size }: ButtonType) => {
 	return <button className={`${image} ${bgColor} ${size} rounded bg-center bg-no-repeat`} type={type}></button>;
 };
 

@@ -1,7 +1,8 @@
 import Button from './Button.tsx';
+import { InputTypes } from '../Types.ts';
 
 function SearchBar() {
-	const handleInputChange = () => {};
+	const handleInputChange = () => {}; // Probably you will create this funct in the content component, i dnt know we gonna research tomorrow
 
 	return (
 		<div className="absolute top-24 flex h-20 w-[90%] justify-between rounded bg-gray-light p-4 shadow-2xl">
@@ -22,17 +23,7 @@ function SearchBar() {
 	);
 }
 
-function Input({
-	inputType,
-	inputValue,
-	example,
-	onChange,
-}: {
-	inputType: string;
-	inputValue: string;
-	example: string;
-	onChange: (value: never) => void;
-}) {
+function Input({ inputType, inputValue, example, onChange }: InputTypes) {
 	return (
 		<input
 			className={`outline-none`}

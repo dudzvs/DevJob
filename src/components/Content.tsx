@@ -1,10 +1,11 @@
 import SearchBar from './SearchBar';
+import Card from './Card';
 
 const Content = () => {
 	return (
-		<main className="flex justify-center">
+		<main className="flex flex-col items-center justify-center">
 			<SearchBar />
-			<div></div> {/* Cards component */}
+			<Card />
 		</main>
 	);
 };
