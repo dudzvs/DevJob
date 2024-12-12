@@ -3,7 +3,7 @@ import Content from './Content';
 
 const Page = () => {
 	return (
-		<div className="bg-gray-light flex h-screen flex-col">
+		<div className="flex h-screen flex-col bg-gray-light">
 			<Header />
 			<Content />
 		</div>

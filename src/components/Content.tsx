@@ -21,25 +21,27 @@ const Content = () => {
 	}, []);
 
 	return (
-		<main className="mt-32 grid items-center justify-center gap-10 place-self-center p-5 sm:grid-cols-2 md:gap-20 lg:grid-cols-3 lg:gap-24">
-			<SearchBar />
-			{jobData.length > 0 ? (
-				jobData.map((job) => (
-					<Card
-						key={job.id}
-						icon={job.logo}
-						position={job.position}
-						company={job.company}
-						contract={job.contract}
-						location={job.location}
-						postedAt={job.postedAt}
-						bgColor={job.logoBackground}
-					/>
-				))
-			) : (
-				<p>Carregando...</p>
-			)}
-		</main>
+		<>
+			<main className="mt-32 grid items-center justify-center gap-10 place-self-center p-5 sm:grid-cols-2 md:gap-20 lg:grid-cols-3 lg:gap-16">
+				<SearchBar />
+				{jobData.length > 0 ? (
+					jobData.map((job) => (
+						<Card
+							key={job.id}
+							icon={job.logo}
+							position={job.position}
+							company={job.company}
+							contract={job.contract}
+							location={job.location}
+							postedAt={job.postedAt}
+							bgColor={job.logoBackground}
+						/>
+					))
+				) : (
+					<p>Carregando...</p>
+				)}
+			</main>
+		</>
 	);
 };
 
