@@ -9,17 +9,18 @@ export type CardTypes = {
 };
 
 export type InputTypes = {
+	id?: string;
+	name: string;
 	inputType: string;
 	inputValue: string;
-	example: string;
+	example?: string;
+	optionsClasses: string;
 	onChange: (value: never) => void;
 };
 
 export type ButtonType = {
-	image: string;
-	bgColor: string;
+	optionClasses: string;
 	type: 'submit' | 'button';
-	size: string;
 };
 
 export type JobTypes = {
