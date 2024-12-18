@@ -19,6 +19,7 @@ export type InputTypes = {
 };
 
 export type ButtonType = {
+	children?: string;
 	optionClasses: string;
 	type: 'submit' | 'button';
 };

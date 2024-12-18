@@ -5,7 +5,7 @@ function SearchBar() {
 	const handleInputChange = () => {}; // Probably you will create this funct in the content component, i dnt know we gonna research tomorrow
 
 	return (
-		<div className="absolute left-1/2 right-1/2 top-28 flex h-20 w-[90%] -translate-x-1/2 transform justify-between rounded bg-gray-light p-4 shadow-2xl lg:max-w-[50%]">
+		<div className="absolute left-1/2 right-1/2 top-28 flex h-20 w-[90%] -translate-x-1/2 transform justify-between rounded bg-gray-light dark:bg-blue-midnight p-4 shadow-2xl lg:max-w-[50%]">
 			<form className="flex w-full items-center justify-between p-2">
 				<Input
 					inputType={'text'}
@@ -35,7 +35,7 @@ function SearchBar() {
 					id={'inputCheckbox'}
 					name={'isFullTime'}
 				/>
-				<span className="hidden text-nowrap text-base font-bold sm:block">Full Time Only</span>
+				<span className="hidden text-nowrap text-base font-bold dark:text-gray-light sm:block">Full Time Only</span>
 				<div className="flex items-center">
 					<Button
 						optionClasses={'bg-icon-filter bg-transparent w-5 h-5 mr-6 ml-6 sm:hidden'}
@@ -43,7 +43,7 @@ function SearchBar() {
 					/>
 					<Button
 						optionClasses={
-							'bg-icon-search-white bg-blue-thick w-12 sm:w-20 h-12 sm:bg-none text-pureWhite font-bold sm:ml-5'
+							'bg-icon-search-white bg-blue-thick hover:bg-blue-soft w-12 sm:w-20 h-12 sm:bg-none text-pureWhite font-bold sm:ml-5'
 						}
 						type={'submit'}
 						children={'Search'}
