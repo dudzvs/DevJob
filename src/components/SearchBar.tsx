@@ -1,11 +1,26 @@
+import { useState } from 'react';
 import Button from './Button.tsx';
 import { InputTypes } from '../Types.ts';
 
 function SearchBar() {
-	const handleInputChange = () => {}; // Probably you will create this funct in the content component, i dnt know we gonna research tomorrow
+
+	const [isModalOpen, setIsModalOpen] = useState(false);
+
+	const handleInputChange = () => {};
+
+	const handleSubmit = () => {};
+
+	const handleModalOpen = () => {
+		setIsModalOpen(true);
+	};
 
 	return (
-		<div className="absolute left-1/2 right-1/2 top-28 flex h-20 w-[90%] -translate-x-1/2 transform justify-between rounded bg-gray-light dark:bg-blue-midnight p-4 shadow-2xl lg:max-w-[50%]">
+		<div className="absolute left-1/2 right-1/2 z-40 top-28 flex h-20 w-[90%] -translate-x-1/2 transform justify-between rounded bg-gray-light dark:bg-blue-midnight p-4 shadow-2xl lg:max-w-[50%]">
+
+
+			{isModalOpen && (
+				<div className="fixed left-[-19px] inset-0 bg-blue-midnight opacity-50 w-screen h-screen bg-opacity-100" />
+			)}
 			<form className="flex w-full items-center justify-between p-2">
 				<Input
 					inputType={'text'}
@@ -40,6 +55,7 @@ function SearchBar() {
 					<Button
 						optionClasses={'bg-icon-filter bg-transparent w-5 h-5 mr-6 ml-6 sm:hidden'}
 						type={'button'}
+						onSmashButton={handleModalOpen}
 					/>
 					<Button
 						optionClasses={
@@ -47,11 +63,34 @@ function SearchBar() {
 						}
 						type={'submit'}
 						children={'Search'}
+						onSmashButton={handleSubmit}
 					/>
 				</div>
 			</form>
+
+
+
+			{isModalOpen && <Modal handleSubmit={handleSubmit} />}
 		</div>
 	);
+}
+
+
+function Modal({ handleSubmit }: { handleSubmit: () => void }) {
+	return (
+		<div className='absolute top-44 w-full left-0'>
+			<form className='bg-pureWhite p-7 h-full flex flex-col gap-2 rounded shadow-2xl'>
+				<Input name={'location'} inputType={'text'} inputValue={''} optionsClasses={'w-full bg-icon-location pl-9'} />
+				<label
+					htmlFor="inputCheckbox"
+					className=""
+				></label>
+				<Input name={'isFullTime'} inputType={'checkbox'} inputValue={''} optionsClasses={'hidden'} id={'inputCheckbox'} />
+				<span className="font-bold">Full Time Only</span>
+				<Button optionClasses={'w-full h-12 bg-blue-thick mt-6 text-pureWhite font-bold'} type={'submit'} children={'Search'} onSmashButton={handleSubmit} />
+			</form>
+		</div>
+	)
 }
 
 function Input({ inputType, inputValue, example, onChange, optionsClasses, id }: InputTypes) {

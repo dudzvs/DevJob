@@ -15,13 +15,14 @@ export type InputTypes = {
 	inputValue: string;
 	example?: string;
 	optionsClasses: string;
-	onChange: (value: never) => void;
+	onChange?: (value: never) => void;
 };
 
 export type ButtonType = {
 	children?: string;
 	optionClasses: string;
 	type: 'submit' | 'button';
+	onSmashButton?: () => void;
 };
 
 export type JobTypes = {

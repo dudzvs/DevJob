@@ -2,7 +2,7 @@ import { CardTypes } from '../Types.ts';
 
 const Card = ({ icon, company, postedAt, contract, position, location, bgColor }: CardTypes) => {
 	return (
-		<div className="relative flex w-full cursor-pointer flex-col items-center justify-start rounded-2xl p-10 align-text-top dark:text-gray-light  lg:max-w-[600px]">
+		<div className="relative flex w-full cursor-pointer flex-col items-center justify-start rounded-2xl p-10 align-text-top dark:bg-blue-veryDark dark:text-gray-light  lg:max-w-[600px]">
 			<div
 				className={`absolute left-10 top-[-22px] flex h-[50px] w-[50px] items-center justify-center rounded`}
 				style={{ backgroundColor: bgColor }}
